@@ -1,0 +1,12 @@
+<h1>Личный кабинет</h1>
+<ul>
+  {% for site in sites %}
+  <li>
+    {{ site.name }} -
+    <a href="{% url 'site_statistics' site.id %}">Статистика</a> -
+    <a href="{% url 'proxy_site' site.name %}">Перейти на сайт</a>
+  </li>
+  {% endfor %}
+</ul>
+<a href="{% url 'create_site' %}">Добавить новый сайт</a>
+<a href="{% url 'edit_profile' %}">Редактировать профиль</a>

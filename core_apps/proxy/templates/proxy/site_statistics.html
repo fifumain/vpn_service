@@ -1,0 +1,5 @@
+<h1>Статистика сайта: {{ stats.site.name }}</h1>
+<p>Количество переходов: {{ stats.page_visits }}</p>
+<p>Отправлено данных: {{ stats.data_sent }} байт</p>
+<p>Получено данных: {{ stats.data_received }} байт</p>
+<a href="{% url 'dashboard' %}">Вернуться в личный кабинет</a>
